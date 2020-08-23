@@ -1,0 +1,37 @@
+
+<h1> Add </h1>
+
+
+	<form [formGroup]="peopleForm" (ngSubmit)="submit()">
+
+ {{formDataSubmittedtMessage}}
+ 
+			{{errrorMessage_DuplicateRecord}} {{errorMessage_emptyField}}
+			<div> {{CC_error_MustBeNumber}} {{CC_error_CannotContain_9}} {{CC_error_16_numbers}} {{CC_error_StartWith_5}} </div>
+
+			<div fxFlex fxLayout="row wrap" fxLayoutGap="20px">
+
+				<mat-form-field>
+					<input matInput placeholder="First name" formControlName="fName">
+				</mat-form-field>
+
+				<mat-form-field>
+					<input matInput placeholder="Last name" formControlName="lName">
+				</mat-form-field>
+
+
+
+			<div fxFlex class="register-but">
+				<button   mat-raised-button color="primary">submit</button>
+			</div>
+
+			</div>
+
+
+	
+
+	</form>
+	<br> {{ peopleForm.value | json }}
+
+
+
